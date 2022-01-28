@@ -9,3 +9,5 @@ Enslave is based on both the "Give For Adoption" and OLD mods. I combinationed t
 
 Current WIP:
 mode to ask if you want to adopt a child or children whose parents have fallen on hard times.
+
+Message works is a document that allows you to test your first statements and possibly last statements by a triggerable icon. You would need to add it to an existing mod folder, as it's only the equivilent to the main.js page for mods. It's purpose is to make it easier for developers to troubleshoot their mods in pieces.
