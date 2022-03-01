@@ -23,4 +23,5 @@ Current Mod Ideas:
 feel free to do these if you want
 a 2 more mods to ask if you want to adopt a child or children whose parents have fallen on hard times. 1 expands on the current mod tightening who can adopt but still as a button you can press. So you can chose to initiate it. The other as a random event
 a mod that allows you to make the game easier
-
+ a mod to increase the number of lgbtq people in the family
+ a mod to introduce transgender characters (I'm considering how this will affect their sexual orientation or not. Also need to run tests to see if a married person will automatically be divorced if their gender changes or not. If not that will make things easier. I might just end up checking if they are married and then disabling it if they are)
