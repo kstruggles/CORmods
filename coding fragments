@@ -1,0 +1,5 @@
+Coding fragments, from existing mods or discussions about modding
+
+observations:
+interesting that in 'divorce' the let statement is characterSpouse not character.spouse or just spouse. 
+in OLD character.father/mother were used. since they both work, obviously not important.
