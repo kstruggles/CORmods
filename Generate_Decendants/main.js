@@ -1,4 +1,4 @@
-// Give child up for Generate_Decendantsion button - costs cash, etc and visible upto a certain age - kills the child in game
+//Generate_Decendantsion button
 {
   canTriggerIfUnavailable: true,
   checkType: 'householdCharacters',
@@ -151,15 +151,18 @@ let characterSpouse = daapi.getCharacter({ characterId: character.spouseId })
 	     var generatedCharacterId = daapi.generateCharacter({
   characterFeatures: {
 	      dynastyId:daapi.getCharacter({ characterId: daapi.getState().current.id }).dynastyId,
-     birthYear: daapi.getState().year - 1 ,
-	 fatherId: daapi.getState().current.id,
-	motherId: daapi.getCharacter({ characterId: daapi.getState().current.id }).spouseId,
+     birthYear: daapi.getState().year - 1 
   },
                  })
 		
            
        daapi.updateCharacter({characterId, character:{ childrenIds: [...character.childrenIds, generatedCharacterId] }})
 	   daapi.updateCharacter({characterId: spouseId, character:{ childrenIds: [...characterSpouse.childrenIds, generatedCharacterId] }})
+	   daapi.updateCharacter({characterId: generatedCharacterId, character:{
+                 fatherId: characterId,
+          motherId: character.spouseId
+        }
+		})
 	},
 	    process1({ characterId }) {
       let character = daapi.getCharacter({ characterId })
@@ -195,12 +198,17 @@ let characterSpouse = daapi.getCharacter({ characterId: character.spouseId })
 	     var generatedCharacterId = daapi.generateCharacter({
   characterFeatures: {
 	dynastyId:daapi.getCharacter({ characterId: daapi.getState().current.id }).dynastyId,
-     birthYear: daapi.getState().year - 1 ,
-	 fatherId: daapi.getState().current.id	  },
+     birthYear: daapi.getState().year - 1 
+	  },
                  })
 		
            
        daapi.updateCharacter({characterId, character:{ childrenIds: [...character.childrenIds, generatedCharacterId] }})
+	   daapi.updateCharacter({characterId: generatedCharacterId, character:{
+                 fatherId: characterId
+         
+        }
+		})
 	},
 	    process2({ characterId }) {
       let character = daapi.getCharacter({ characterId })
@@ -237,16 +245,20 @@ let characterSpouse = daapi.getCharacter({ characterId: character.spouseId })
 let characterSpouse = daapi.getCharacter({ characterId: character.spouseId })
 	     var generatedCharacterId = daapi.generateCharacter({
   characterFeatures: {
-	dynastyId:daapi.getCharacter({ characterId: daapi.getState().current.id }).dynastyId,
-     birthYear: daapi.getState().year - 1 ,
-	 fatherId: daapi.getCharacter({ characterId: daapi.getState().current.id }).spouseId,
-	motherId:daapi.getState().current.id ,
-  },
+	      dynastyId:daapi.getCharacter({ characterId: daapi.getState().current.id }).dynastyId,
+     birthYear: daapi.getState().year - 1 
+  }
                  })
 		
            
        daapi.updateCharacter({characterId, character:{ childrenIds: [...character.childrenIds, generatedCharacterId] }})
 	   daapi.updateCharacter({characterId: spouseId, character:{ childrenIds: [...characterSpouse.childrenIds, generatedCharacterId] }})
+	   daapi.updateCharacter({characterId: generatedCharacterId, character:{
+                 fatherId: character.spouseId,
+				 motherId: characterId
+               }
+		})
+	   
 	
   
 	},
@@ -283,11 +295,12 @@ let characterSpouse = daapi.getCharacter({ characterId: character.spouseId })
 	{let character = daapi.getCharacter({ characterId })
 	     var generatedCharacterId = daapi.generateCharacter({
   characterFeatures: {
-	dynastyId:daapi.getCharacter({ characterId: daapi.getState().current.id }).dynastyId,
-     birthYear: daapi.getState().year - 1 ,
-	 motherId: daapi.getState().current.id	  }
+	      dynastyId:daapi.getCharacter({ characterId: daapi.getState().current.id }).dynastyId,
+     birthYear: daapi.getState().year - 1 
+  },
                  })
-	 daapi.updateCharacter({characterId, character:{ childrenIds: [...character.childrenIds, generatedCharacterId] }})
+	 daapi.updateCharacter({characterId, character:{ childrenIds: [...character.childrenIds, generatedCharacterId]	 }})
+	 daapi.updateCharacter({characterId: generatedCharacterId, character:{motherId: characterId}	})
 	
   
 	}
