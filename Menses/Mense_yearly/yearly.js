@@ -1,0 +1,1 @@
+['/Mense_yearly/main']
