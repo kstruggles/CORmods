@@ -15,6 +15,9 @@ it checks if your family is headed by a man or woman, and adds the icon to your 
 GenMultiDescendants
 Generates 1-4 children for you to adopt with randomized traits and stats. a more complicated version of Generate Decentants.
 
+RandomlyAdopt
+Event based version of GenMultiDescendants.
+
 Menses
 it ensures any married woman in your family becomes pregnant more frequently. It also gives your unmarried daughters a slight chance to become pregnant. I've ensured that any unwed daughter's child from this stays with her, rather then disappearing. 
 Mense_yearly runs the same script without the math. causing every woman over 14 and under 40 to get pregnant if they aren't already. 
@@ -30,7 +33,6 @@ Trans_text, alternate version of transgender where it spawns a pop up to let you
 
 Current Mod Ideas:
 feel free to do these if you want
-changing GenMultDescendants into a random event
 a mod that allows you to make the game easier
-a mod to increase the number of lgbtq people in the family
+
  
